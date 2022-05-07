@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Crud app woth express</title>
+</head>
+<body>
+    <h1>crud app with express</h1>
+
+    <div>
+        <h2>Insert new quote</h2>
+        <form action="/quotes" method="post"> 
+            Name: <input type="text" name="name">
+            Quote: <input type="text" name="quote">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+    <hr>
+    <h1>Existing quotes</h1>
+    <div>
+        <ul>
+            <% for(var i=0; i < quotes.length; i++) { %>
+                <li>
+                    <span>
+                        <b>
+                            <%= quotes[i].name %>
+                            
+                        </b>
+                    </span>
+                    <span>:
+                        
+                            <i>
+                                <%= quotes[i].quote %>
+                            </i>
+                        
+                    </span>
+                </li>
+                <% } %>
+
+        </ul>
+        
+    </div>
+    <hr>
+    <div>
+        <h2>Update some quote</h2>
+        <p></p>
+        <button id="updateBtn">Update</button>
+    </div>
+
+    <hr>
+    <div>
+        <h2>Delete some quote</h2>
+        <button id="deleteBtn">Delete</button>
+    </div>
+
+    <script src="./main.js"> 
+
+    </script>
+
+</html>
